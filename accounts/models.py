@@ -1,5 +1,3 @@
-
-
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -12,7 +10,7 @@ class User(AbstractUser):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    # Make email required for authentication
+
     REQUIRED_FIELDS = ['email']
     
     class Meta:
@@ -24,5 +22,4 @@ class User(AbstractUser):
     
     @property
     def full_name(self):
-        """Return full name or username if names not provided"""
         return f"{self.first_name} {self.last_name}".strip() or self.username

@@ -31,7 +31,7 @@ class Task(models.Model):
     )
     due_date = models.DateTimeField(null=True, blank=True)
     
-    # Relationships
+   
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
@@ -45,7 +45,7 @@ class Task(models.Model):
         related_name='assigned_tasks'
     )
     
-    # Timestamps
+   
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     completed_at = models.DateTimeField(null=True, blank=True)
@@ -73,7 +73,6 @@ class Task(models.Model):
 
 
 class Category(models.Model):
-    """Task categories"""
     name = models.CharField(max_length=50, unique=True)
     description = models.TextField(blank=True)
     color = models.CharField(max_length=7, default='#808080')  # Hex color
@@ -94,7 +93,6 @@ class Category(models.Model):
 
 
 class Tag(models.Model):
-    """Task tags"""
     name = models.CharField(max_length=50, unique=True)
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -111,9 +109,8 @@ class Tag(models.Model):
         return self.name
 
 
-# Many-to-many relationships
+
 class TaskCategory(models.Model):
-    """Many-to-many relationship between tasks and categories"""
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
@@ -123,7 +120,6 @@ class TaskCategory(models.Model):
 
 
 class TaskTag(models.Model):
-    """Many-to-many relationship between tasks and tags"""
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     
@@ -133,7 +129,6 @@ class TaskTag(models.Model):
 
 
 class Comment(models.Model):
-    """Task comments"""
     task = models.ForeignKey(
         Task,
         on_delete=models.CASCADE,
@@ -157,7 +152,6 @@ class Comment(models.Model):
 
 
 class Attachment(models.Model):
-    """Task attachments"""
     task = models.ForeignKey(
         Task,
         on_delete=models.CASCADE,

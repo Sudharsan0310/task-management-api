@@ -1,4 +1,3 @@
-# .gitignore
 # Python
 *.py[cod]
 *$py.class
@@ -15,6 +14,14 @@ db.sqlite3
 db.sqlite3-journal
 /media
 /staticfiles
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
 
 # Environment
 .env

@@ -2,7 +2,10 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 class User(AbstractUser):
-    
+    """
+    Custom user model - extended from Django's base user.
+    added phone and bio fields based on project requirements.
+    """
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15, blank=True, null=True)
     bio = models.TextField(max_length=500, blank=True)

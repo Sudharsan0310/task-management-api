@@ -4,7 +4,6 @@ from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters, status
 from django.db.models import Q
-
 from .models import Task, Category, Tag, Comment, Attachment
 from .serializers import (
     TaskSerializer,
@@ -44,7 +43,8 @@ class TaskViewSet(viewsets.ModelViewSet):
         return TaskSerializer
     
     def perform_create(self, serializer):
-        """Set current user as task owner."""
+        """Auto-assign current user as owner when creating task"""
+        """This prevents users from creating tasks for others"""
         serializer.save(owner=self.request.user)
     
     @action(detail=True, methods=['post'])
@@ -78,7 +78,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             return Response(serializer.data)
         except User.DoesNotExist:
             return Response(
-                {'error': 'User not found'},
+                {'error': 'User not found this'},
                 status=status.HTTP_404_NOT_FOUND
             )
     

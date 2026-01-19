@@ -50,7 +50,8 @@ Each user only sees their own tasks - I implemented proper authentication and pe
 *Users can view, create, and manage their tasks*
 
 ### Search & Filter
-![Filtering](screenshots/04_filtering.png)
+![Filtering](screenshots/04_Filtering_search.PNG.jpeg)
+![Filtering](screenshots/04_filtering.jpeg)
 *Smart filtering by status, priority, and search*
 
 ### Task Analytics

@@ -6,7 +6,7 @@
 [![Django](https://img.shields.io/badge/Django-5.0+-green.svg)](https://www.djangoproject.com/)
 [![DRF](https://img.shields.io/badge/DRF-3.14+-red.svg)](https://www.django-rest-framework.org/)
 
-[🌐 Live Demo](https://taskmanager-backend.up.railway.app/) | [📚 API Docs](https://taskmanager-backend.up.railway.app/swagger/) | [💼 LinkedIn](https://linkedin.com/in/sudharsanjs)
+[🌐 Live Demo](https://taskmanager-backend.up.railway.app/) | [📚 API Docs](https://taskmanager-backend.up.railway.app/redoc/) | [💼 LinkedIn](https://linkedin.com/in/sudharsanjs)
 
 ---
 
@@ -502,10 +502,9 @@ I'm open to feedback and suggestions for improvement!
 ## 🙏 Acknowledgments
 
 - Django REST Framework documentation was incredibly helpful
-- Andreas Jud's DRF tutorial on YouTube
+- Tech With Rathan DRF tutorial on YouTube
 - Railway's excellent deployment documentation
 - Stack Overflow community for debugging help
-- My college professors for foundational knowledge
 
 ---
 

@@ -54,12 +54,9 @@ Each user only sees their own tasks - I implemented proper authentication and pe
 ![Filtering](screenshots/04_filtering.jpeg)
 *Smart filtering by status, priority, and search*
 
-### Task Analytics
-![Statistics](screenshots/05_statistics.png)
-*Dashboard showing task distribution*
-
 ### Secure Login
-![JWT Authentication](screenshots/06_jwt_auth.png)
+![JWT Authentication](screenshots/06_JWT_Register.png)
+![JWT Authentication](screenshots/06_JWT_Login.png)
 *JWT token-based authentication for security*
 
 ### Admin Interface
